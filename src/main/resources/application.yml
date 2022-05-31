@@ -15,8 +15,7 @@ spring:
         - id: userService
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/auth/**
-            - Path=/api/user/**
+            - Path=/api/v1/**
 
 eureka:
   client:
