@@ -16,11 +16,16 @@ spring:
           uri: http://localhost:8080
           predicates:
             - Path=/api/v1/**
-
+##          filters:
+##            - AddResponseHeader=Access-Control-Allow-Origin, *
+##            - RewritePath=/http://localhost:8080/(?<segment>.*), /$\{segment}
+#      globalcors:
+#        add-to-simple-url-handler-mapping: true
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
 
